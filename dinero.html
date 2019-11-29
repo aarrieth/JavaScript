@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Retirar billetes</title>
+</head>
+
+<body>
+    <script>
+
+        function retirarDinero(dinero) {
+
+            let billesteCincuenta
+            let billetresVeinte
+            let billetesDiez
+            let saldoDinero
+
+
+            if (dinero > 0) {
+               // if (((dinero % 50000) === 0) || ((dinero % 20000) === 0) || ((dinero % 10000) === 0)) {
+                   // console.log('se cumple la condición módulo')
+                    billesteCincuenta = Math.floor(dinero / 50000)
+                   //console.log('Cantidad de billestes de 50 mil:', billesteCincuenta)
+                    saldoDinero = dinero - (billesteCincuenta * 50000)
+                   //console.log('El saldo es:', saldoDinero)
+                //}
+                if (saldoDinero > 0) {
+                   //console.log('cumple condición para 20 mil')
+                   billetresVeinte = Math.floor(saldoDinero / 20000)
+                  // console.log('Cantidad de billestes de 20 mil:', billetresVeinte)
+                    saldoDinero = saldoDinero - (billetresVeinte * 20000)
+                  //console.log('El saldo es:', saldoDinero)
+                } if (saldoDinero > 0) {
+                  // console.log('cumple condición para 10 mil')
+                    billetesDiez = Math.floor(saldoDinero / 10000)
+                   //console.log('Cantidad de billestes de 10 mil:', billetesDiez)
+                    saldoDinero = saldoDinero - (billetesDiez * 10000)
+                   //console.log('El saldo es:', saldoDinero)
+                    
+                }
+
+                //return saldoDinero
+                
+            } else {
+                console.log('No se puede realizar operación')
+               
+            }
+           
+            // console.log('Por la cantidad de dinero a retirar usted va a recibir en billetes de 50 mil:'
+            // + billesteCincuenta +'en billetes de 20 mil:', billetresVeinte + 'en billetes de a 10 mil: ', billetesDiez)
+
+         console.log('billetes de 50 mil:', billesteCincuenta)
+         console.log('billetes de 20 mil:', billetresVeinte)
+         console.log('billetes de 10 mil:', billetesDiez)
+         console.log('Su saldo es:', saldoDinero)   
+            
+        }
+
+        console.log(
+            retirarDinero(1750410)
+        )
+
+
+    </script>
+
+</body>
+
+</html>
