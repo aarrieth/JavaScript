@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Probando còdigo de JS</title>
+</head>
+
+<body>
+    <script>
+
+       function sumarNumeros(num1, num2) {
+            return num1 + num2
+        }
+
+        console.log(`La suma de número es: ${sumarNumeros(2, 4)}`)
+
+        const personas = {
+
+            nombre: "Juan",
+            apellidos: "Pérez",
+            email: "juanperez2019@gmail.com",
+            profesion: "Evanista"
+
+        }
+
+       console.log(`La profesión de ${personas.nombre} es ${personas.profesion} y su cuenta de correo es ${personas.email}`)
+
+       class Operations{
+           constructor(numero1, numero2){
+               this.numero1 = numero1
+               this.numero2 = numero2
+           }
+
+           get suma(){
+               return this.calcularSuma()
+           }
+
+           calcularSuma(numero1, numero2){
+               return this.numero1 + this.numero2
+           }
+       }
+
+       const sumNumeros = new Operations(2,5)
+       console.log(`El resultado de la suma es: ${sumNumeros.suma}`)
+
+
+       class Personas{
+           constructor(nombrePersona){
+               this.nombrePersona = nombrePersona
+           }
+           get name(){
+               return this.mostrarNombre()
+           }
+
+           mostrarNombre(nombrePersona){
+              return console.log(`el nombre de la persona es ${this.nombrePersona}`)
+           }
+       }
+
+       const m = new Personas("Maria")
+       console.log(`El nombre de la persona es: ${m.nombrePersona}`)
+
+       let frutas = ["Manzana", "Pera","Uva","Durazno", "Limón"]
+        console.log(`las frutas del Array son: ${frutas}`)
+        console.log(`El tamaño del arrays frutas es ${frutas.length}`)
+        console.log(`La posición de Uva en el array frutas es: ${frutas.indexOf("Uva")}`)
+    
+    </script>
+
+</body>
+
+</html>
