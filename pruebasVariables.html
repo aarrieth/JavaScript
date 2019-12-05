@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Probando variables en JS</title>
+</head>
+<body>
+    <script>
+
+        var nombre = "Luis"
+        function mostrarNombre() {
+           // nombre = "Pedro" //redefinir variable.
+            //let nombre = "Pedro" //Muestra "Pedro" por pertener al bloque de código de la función
+            //nombre = "Maria" //reasignar "Marìa"
+            var nombre = "José" //una vez declarada la variable "Nombre" no se puede volver a declarar
+            console.log(`El nombre de la persona es: ${nombre}`)
+            
+        }
+        console.log(mostrarNombre())
+
+        //validar estado null de una variable
+
+        let num1= null // num1 por se definida como "null" se comporta como 0
+        console.log(`El resultado es ${num1*20}`)
+
+        function restarNumeros(b) {
+            let a = null // En este caso, a actua como una condición false, ya que su valor es null.
+            if (a>=b) {
+                let resta = a-b
+                console.log(`La resta de números es: ${resta}`)
+                
+            } else {
+                console.log("No se puede realizar la resta")
+                
+            }
+            
+        }
+        console.log(restarNumeros(4))
+    
+        if(true){
+            var x = 5
+            //al cambiar la definiciòn de la variable por LET me mostrará error, ya que let hace parte de la expresión if
+        }
+        console.log(`El valor de X es: ${x}`)
+
+        console.log(myVar)
+        var myVar = "Mi valor" 
+
+        //declarar función viewName. Usando Función Hoisting
+
+        viewName()
+
+        function viewName() {
+            console.log("Me llamo función ViewName() y estoy usando Función Hoisting")
+            
+        }
+
+        //declarar expresión de función viewName2
+
+        viewName2()
+        var viewName2 = function () {
+            console.log("Me llamo viewName2 y soy una expresión de función; y uso Función Hoisting")
+            
+        }
+
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>
