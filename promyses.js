@@ -77,8 +77,7 @@ const getCharacter = (url_api) => {
     return new Promise((resolve, reject) => {
         fetch(url_api)
             .then(response => {
-                (response.status === 200) ?
-                resolve(response.json()): reject(new Error(`Ha ocurrido un error : ${url_api}`))
+                resolve(response.json());
             })
     });
 };
@@ -95,4 +94,4 @@ getCharacter(url_api)
     .then(response => {
         console.log(`Origen: ${response.results[0].origin.name}`);
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error(`Ha ocurrido un error`));
