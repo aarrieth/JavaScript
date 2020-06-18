@@ -25,6 +25,3 @@ Object.keys(user).forEach(function viewProps(value, index, array) {
 //obteniendo valores del objeto user.
 const values = Object.keys(user).map(key => user[key]);
 console.log(values);
-
-const u = Object.values(user);
-console.log(u);
